@@ -28,7 +28,7 @@ h1 {
 }
 
 p {
-  margin-bottom: 32px;
+	margin: auto;
 }
 
 
@@ -39,11 +39,6 @@ p {
   left: 0;
   top: 0;
   width: 100%;
-}
-
-/* prevent clicks */
-.noclick {
-  pointer-events: none;
 }
 
 /* screen bevel */
