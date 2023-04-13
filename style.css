@@ -43,9 +43,10 @@ p {
 
 /* screen bevel */
 .frame {
+  
   background-color: transparent;
   border-radius: 32px;
-  border: 16px solid;
+  border: 26px solid;
   border-bottom-color: #121212;
   border-left-color: #080808;
   border-right-color: #080808;
@@ -64,6 +65,8 @@ p {
   animation: flicker 1s infinite;
   background-color: var(--console-bg);
   overflow: scroll;
+  scrollbar-width: thin;
+  scrollbar-color: var(--console-color) transparent;
   position: absolute;
   padding: 48px 32px;
   pointer-events: auto;
@@ -153,4 +156,16 @@ p {
   100% {
     opacity: 1;
   }
+}
+.output::-webkit-scrollbar {
+  width: 6px;
+}
+
+.output::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+.output::-webkit-scrollbar-thumb {
+  background-color: var(--console-color);
+  border-radius: 3px;
 }
