@@ -61,6 +61,7 @@ p {
 
 /* screen output */
 .output {
+  animation: flicker 1s infinite;
   background-color: var(--console-bg);
   overflow: scroll;
   position: absolute;
@@ -82,4 +83,74 @@ p {
   background-size: 100% 3px;
   border-radius: 32px;
   position: absolute;
+  
+}
+
+.output::after {
+  content: "_";
+  animation: blink-cursor 1s infinite;
+}
+
+
+
+.output p {
+  
+  opacity: 0;
+  animation: type-text 1s ease-in-out forwards;
+}
+
+@keyframes blink-cursor {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes type-text {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes flicker {
+  0% {
+    opacity: 1;
+  }
+  5% {
+    opacity: 0.7;
+  }
+  10% {
+    opacity: 1;
+  }
+  15% {
+    opacity: 0.9;
+  }
+  20% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 0.85;
+  }
+  30% {
+    opacity: 1;
+  }
+  35% {
+    opacity: 0.9;
+  }
+  40% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
 }
