@@ -1,13 +1,12 @@
-/* pixelish webfont */
 @import url(https://fonts.googleapis.com/css?family=VT323);
 
-/* set main colors */
+/* main colors */
 :root {
   --console-color: #14fdce;
   --console-bg: #031e11;
 }
 
-/* global settings */
+/* global  */
 * {
   overflow-y: hidden;
   box-sizing: border-box;
@@ -33,7 +32,7 @@ p {
 }
 
 
-/* basic screen module */
+/*screen */
 .piece {
   display: block;
   height: 100%;
@@ -42,7 +41,7 @@ p {
   width: 100%;
 }
 
-/* screen bevel */
+/* that goofy side on the corner */
 .frame {
   
   background-color: transparent;
@@ -75,7 +74,7 @@ p {
   z-index: -1;
 }
 
-/* chunky scanlines */
+/* scanlines */
 .scanlines {
   background: linear-gradient(
     to bottom,
